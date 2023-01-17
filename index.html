@@ -1,156 +1,554 @@
-
-
-<style>
-h1 {text-align: center;}
-p {text-align: center;}
-a {text-align: center;}
-</style>
-
-
-<h1 style="background-color: green;">                                     Hello ! <br>  From T-Smart solution Ltd! <br> Corrected Geography National examinations Text Book Download pages </h1>
-<p> <br> Welcome to the E-Somo V1 download page this is an artificial intelligence-enabled application that helps the learner 
-   to smartly  learn effortlessly. <br> By using this interactive app you will get a chance of doing many national examinations by simulation,
-   with direct feedback which will help the learner to quickly gain the required knowledge and skills.  <br>   <br> 
-   Below are link for downloading the printable TextBook (Geography  past national  examinations Questions and answers) for Offline learning,<br> 
-  N.B   You will get a link after successful login .<br>
-        </p>
-
-
-
-
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-<meta charset="UTF-8">
-<title>JJS</title> 
-</head> 
-<body> <input type="text" placeholder="Enter name here" Id="st">  <br> <br>
- <input type="text" placeholder="Enter name here" Id="st2"> 
-
-<script> 
-
-
-function cond() { 
-var a=document.getElementById("st").value; 
-var av=document.getElementById("st2").value; 
-
-let sum = Number(a) + Number(new Date().getFullYear()) + Number(a);
-
-if(a=="112018") { 
-
- var b = document.createElement('a');
-      var linkText = document.createTextNode("ViP master link");
-      b.appendChild(linkText);
-      b.title = "my google";
-     b.href = "https://e-somo.github.io/Welcome-Page/"; 
-      document.body.appendChild(b);
-
-
-
-} 
-
-else if(av==sum ){ 
-
-
-
-  var a = document.createElement('a');
-      var linkText = document.createTextNode("Good client");
-      a.appendChild(linkText);
-      a.title = "my good ";
-      a.href = "https://e-somo.github.io/Welcome-Page/";
-      document.body.appendChild(a);
-
-
-} 
-
-
-else{ 
-
-      var a = document.createElement('a');
-      var linkText = document.createTextNode("Invalid login");
-      a.appendChild(linkText);
-      a.title = "invalid login ";
-      a.href = "https://ytettet/";
-      document.body.appendChild(linkText);
-   
-  
-
-   
-} }
-
-
-
-</script> 
-<button type="button" onclick="cond()">OK</button> <br><br> <br>
-
-
-</body> 
-</html>  
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 <style>
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
+    html, body {
+min-height: 100%;
+padding: 0;
+margin: 0;
+font-family: Roboto, Arial, sans-serif;
+font-size: 14px;
+color: #666;
+}
+h1 {
+margin: 0 0 20px;
+font-weight: 400;
+color: #1c87c9;
+}
+
+
+span.psw {
+  float: right;
+  padding-top: 1px;
+  cursor: pointer;
+}
+p {
+margin: 0 0 5px;
+}
+.main-block {
+display: flex;
+/* flex-direction: column; */
+justify-content: center;
+align-items: center;
+height: fit-content;
+max-width: 50%;
+background: #1c87c9;
+z-index: 100!important;
+overflow-y: scroll;
+}
+form {
+padding: 25px;
+/* margin: 25px; */
+/* float: right; */
+
+box-shadow: 0 2px 5px #f5f5f5; 
+background: #f5f5f5; 
+}
+.fas {
+margin: 25px 10px 0;
+font-size: 72px;
+color: #fff;
+}
+.fa-envelope {
+transform: rotate(-20deg);
+}
+.fa-at , .fa-mail-bulk{
+transform: rotate(10deg);
+}
+input, textarea {
+width: calc(100% - 18px);
+padding: 8px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+outline: none;
+}
+input::placeholder {
+color: #666;
+}
+button {
+width: 100%;
+padding: 10px;
+border: none;
+background: #1c87c9; 
+font-size: 10px;
+font-weight: bolder;
+color: #fff;
+}
+button:hover {
+background: #2371a0;
+} 
+@media (min-width: 632px) {
+.main-block {
+flex-direction: row;
+max-width: 50%;
+}
+ form {
+width: 80%;
+margin: auto;
+}
+/* .left-part{display: none;} */
+.fa-envelope {
+margin-top: 0;
+margin-left: 20%;
+}
+.fa-at {
+margin-top: -10%;
+margin-left: 65%;
+}
+.fa-mail-bulk {
+margin-top: 2%;
+margin-left: 28%;
+}
+}
+
+
+
+input[type=text], input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.dropdown select{
+  width: 100%;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn,.backBtn {
+  width: auto;
+  max-width: fit-content;
+  padding: 10px 18px;
+  background-color: blue;
+}
+
+
+.imgcontainer {
   text-align: center;
-  border-radius: 2px;
+  margin: 20px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 1px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 20px;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: scroll; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.exit {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.exit:hover,
+.exit:focus {
+  color: red;
+  cursor: pointer;
+}
+.psw{
+
+    /* display: inline-block;
+    width: 60%;
+    float: right; */
+}
+
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 632px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+  form{
+    padding: 0%;
+    margin: 0;
+    /* background-color: rebeccapurple; */
+    box-sizing: border-box;
+    width: 90;
+    display: block;
+  }
+  .left-part{
+    display: none;
+  }
+  .main-block{
+    max-width: 90%;
+  }
+  #text{
+    font-size: 14px;
+  }
+  img.avatar {
+    width: 20%;
+    border-radius: 50%;
+  }
+  img{
+    margin-left: 5px;
+    max-width: 40%;
+  }
+  .dropdown{
+    position: fixed;
+    margin-bottom: 25px;
+    top: -145px;
+    min-width: fit-content;
+  }
+  #title{
+    margin-top: 40px!important;
+  }
+  .header{
+    max-height: 18vh;
+  }
+  #id01{
+    width: 90%!important;
+    /* z-index: 1000!important; */
+}
+}
+
+#phnNumber, #refNumber, select{
+    display: inline-block;
+    width: 75%;
+    margin-right: 15px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#mark{
+    color:red;
+    font-size: 20px;
+    cursor: pointer;
+}
+.help{
+    font-size: 12px;
+}
+#code {
+    display: inline-block;
+  /*  width: 8%;*/
+  width:30px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    
+}
+#verified{
+    font-size: 18px;
+    font-weight: 800;
+    color: green;
+}
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color:green;
+  padding: 30px 5px;
+  color: white;
+  z-index: 90;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+/* input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 12px;
+} */
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: fit-content;
+  background: #d9d9d9;
+  color: #555;
+  /* float: right; */
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  /* cursor: pointer; */
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+
+/* body {
+  
+  padding: 1px 1px;
+  
+  font-family: sans-serif;
+  font-weight: lighter;
+} */
+ 
+#timer {
+  font-size: 3em;
+  font-weight: 10;
+  color: white;
+  text-shadow: 0 0 20px #48c8ff;
+}
+ 
+#timer div {
+
+padding-top: 1px;
+  display: inline-block;
+  min-width: 90px;
+  background: #0d1a29;
+  
+}
+ 
+#timer div span {
+  color: #b1cdf1;
+  display: block;
+  font-size: 0.35em;
+  background: #0d1a29;
+  font-weight: 400;
+}
+ 
+ .top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 5px;
+ 
+}
+
+.content {
   padding: 16px;
+}
+
+.sticky {
   position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
+  top: 0;
+  width: 100%;
 }
 
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+.sticky + .content {
+  padding-top: 102px;
 }
 
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  
+  
 }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#myInput{
+    width: 50%;
+}
+#id01{
+    width: 50%;
+    z-index: 1000!important;
+}
+img{
+    margin-left: 25px;
+    max-width: 40%;
+    max-height: 30vh;
+  }
+  li button{
+    max-width: fit-content;
+    /* display: block; */
+    font-size: 12px;
+    margin: 5px 6px;
+  }
+  
+  .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
+.dropdown {
+  max-width: 20%;
+  position: relative;
+  display: inline-block;
 }
 
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
 }
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* .dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;} */
+ 
 </style>
 </head>
 <body>
-
-
-<button onclick="myFunction()">Reset</button>
-
-<div id="snackbar"> Close and Go Back 
-
+  <p id="demo"></p>
+ <iframe  id="myFrame" src=""    frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0%;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+ </body>
+   
 <script>
+alert("i am ok now");
+myFunction();
 function myFunction() {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  
+let agent = navigator.userAgent;
+
+if (agent.includes("Edg")) 
+{
+  document.getElementById("demo").innerHTML = "User-agent:<br>" + agent+"sorry we can not display this page in this brouser please use Google chrome, internet safari, or Mozira firefox thanks";
+  alert("sorry we can not display this page in this brouser please use Google chrome, internet safari, or Mozira firefox thanks");
+
+}else {
+
+  //document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbwABng3cdxyvv_O1GJ4ayXGqJZXGQqBSj9D_RgqsbKaXPvneXv2LowQG00wjMWY1OWbuA/exec";
+  document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbzXqdx2RpyzhEvcpD5hG7W9SapQ6c5k0slBuwcXJYavAhDTPoSTHI28UMqKVIFy9fZo/exec";
+};
 }
+
 </script>
 
 </body>
 </html>
-
