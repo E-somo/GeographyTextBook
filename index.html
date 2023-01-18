@@ -531,31 +531,9 @@ img{
    
 <script>
     
+
     
-    
-    
-    
-     window.addEventListener("message", function (e) {
-        if (e.origin !== "https://script.google.com/macros/s/AKfycbyOGROEQs_QED7zVIq57PCsZ3SRcPQsMFCvFI36ZJo0wx7pUpzLPNtLBl8ppqpI_G3a/exec") {
-            return
-        }
-        
-        const data = JSON.parse(e.data)
-        
-        if (typeof data.name !== "undefined") {
-            localStorage.setItem("name", data.name)
-           /// console.log("Name is set: " + data.name)
-            alert("Name is set: " + data.name);
-        }
-    })
-    
-    
-    
-    
-    
-    
-    
-alert("i am ok now test receiver before");
+alert("Huu go to church plz");
 myFunction();
 function myFunction() {
   
@@ -569,8 +547,41 @@ if (agent.includes("Edg"))
 }else {
 
   //document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbwABng3cdxyvv_O1GJ4ayXGqJZXGQqBSj9D_RgqsbKaXPvneXv2LowQG00wjMWY1OWbuA/exec";
-  document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbzXqdx2RpyzhEvcpD5hG7W9SapQ6c5k0slBuwcXJYavAhDTPoSTHI28UMqKVIFy9fZo/exec";
+  document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbyOGROEQs_QED7zVIq57PCsZ3SRcPQsMFCvFI36ZJo0wx7pUpzLPNtLBl8ppqpI_G3a/exec";
 };
+}
+
+ 
+setInterval(displayHello, 1000);
+ var count=0;
+function displayHello() {
+  count++;
+if (count ==40) {
+    runAfter();
+  }
+}
+
+
+function runAfter() {
+
+     alert("finished counting");
+    window.addEventListener("message", function (e) {
+        if (e.origin !== "https://script.google.com/macros/s/AKfycbyOGROEQs_QED7zVIq57PCsZ3SRcPQsMFCvFI36ZJo0wx7pUpzLPNtLBl8ppqpI_G3a/exec") {
+            return
+        }
+        
+        const data = JSON.parse(e.data)
+        
+        if (typeof data.name !== "undefined") {
+            localStorage.setItem("name", data.name)
+           /// console.log("Name is set: " + data.name)
+            alert("Name is set: " + data.name);
+        }
+    })
+
+
+
+
 }
 
 </script>
