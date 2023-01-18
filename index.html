@@ -533,7 +533,7 @@ img{
     
 
     
-alert("i am ok now test receiver before");
+alert("i am ok now test receiver oriin");
 myFunction();
 function myFunction() {
   
@@ -566,6 +566,7 @@ function runAfter() {
 
      alert("finished counting");
     window.addEventListener("message", function (e) {
+       alert("origin");
         if (e.origin !== "https://n-rskzw3rdiorlgwle53jdj7q2vvlo2b2ompgc73y-0lu-script.googleusercontent.com/userCodeAppPanel") {
            return
         }
@@ -575,7 +576,7 @@ function runAfter() {
         if (typeof data.name !== "undefined") {
             localStorage.setItem("name", data.name)
            /// console.log("Name is set: " + data.name)
-            alert("Name is set: " + data.name);
+            //alert("Name is set: " + data.name);
         }
     })
 
