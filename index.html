@@ -530,7 +530,32 @@ img{
  </body>
    
 <script>
-alert("i am ok now");
+    
+    
+    
+    
+    
+     window.addEventListener("message", function (e) {
+        if (e.origin !== "https://script.google.com/macros/s/AKfycbyOGROEQs_QED7zVIq57PCsZ3SRcPQsMFCvFI36ZJo0wx7pUpzLPNtLBl8ppqpI_G3a/exec") {
+            return
+        }
+        
+        const data = JSON.parse(e.data)
+        
+        if (typeof data.name !== "undefined") {
+            localStorage.setItem("name", data.name)
+           /// console.log("Name is set: " + data.name)
+            alert("Name is set: " + data.name);
+        }
+    })
+    
+    
+    
+    
+    
+    
+    
+alert("i am ok now test receiver before");
 myFunction();
 function myFunction() {
   
